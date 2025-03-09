@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blogs on </title>
+    <link>https://dittorahmat.github.io/blog/</link>
+    <description>Recent content in Blogs on </description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dittorahmat.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Fourth Blog Post</title>
+      <link>https://dittorahmat.github.io/blog/fourth-post/</link>
+      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/blog/fourth-post/</guid>
+      <description>&lt;p&gt;This is placeholder content for my fourth blog post.&lt;/p&gt;
+&lt;p&gt;This is just to demonstrate that blog posts are now working and being displayed on the homepage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fifth Post</title>
+      <link>https://dittorahmat.github.io/blog/fifth-post/</link>
+      <pubDate>Sun, 09 Mar 2025 06:20:01 +0700</pubDate>
+      <guid>https://dittorahmat.github.io/blog/fifth-post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Third Post</title>
+      <link>https://dittorahmat.github.io/blog/third-post/</link>
+      <pubDate>Sun, 09 Mar 2025 06:01:02 +0700</pubDate>
+      <guid>https://dittorahmat.github.io/blog/third-post/</guid>
+      <description>&lt;p&gt;This is placeholder content for my third blog post.&lt;/p&gt;
+&lt;p&gt;This is just to demonstrate that blog posts are now working and being displayed on the homepage.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
