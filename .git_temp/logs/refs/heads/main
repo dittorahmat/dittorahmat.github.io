@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 2e2bd32105b406d17e4f3d7a9663da606402ae6d Ditto Asnar <ditto.asnar@gmail.com> 1741318897 +0700	clone: from https://github.com/dittorahmat/dittorahmat.github.io.git
+2e2bd32105b406d17e4f3d7a9663da606402ae6d 2b4f403c611a21fb54075a1f478bf9030790dcb7 Ditto Asnar <ditto.asnar@gmail.com> 1741484574 +0700	commit: publish github pages
+2b4f403c611a21fb54075a1f478bf9030790dcb7 990ba1212d34f1aca012e56562bd32c1edfa491b Ditto Asnar <ditto.asnar@gmail.com> 1741485367 +0700	commit: Add GitHub Actions workflow for deployment
+990ba1212d34f1aca012e56562bd32c1edfa491b 7023d876a112193f0730dd3a5c5587877b4bf5e3 Ditto Asnar <ditto.asnar@gmail.com> 1741668898 +0700	commit: backup hugo
+7023d876a112193f0730dd3a5c5587877b4bf5e3 30964839dc9ff2c97e6156a7dc5b847c684b66e9 Ditto Asnar <ditto.asnar@gmail.com> 1741669853 +0700	commit: setup blog

@@ -1,0 +1,24 @@
+theme = "PaperMod"
+baseURL = "https://dittorahmat.github.io/"
+
+[params]
+  mainSections = []
+  paginate = 5
+  mermaid = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 20
+  [[menu.main]]
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 30

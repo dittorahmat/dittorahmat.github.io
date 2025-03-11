@@ -1,0 +1,13 @@
+# pack-refs with: peeled fully-peeled sorted 
+ac7479c14f27ed54d8ccf5394239980afdd01df6 refs/remotes/origin/exampleSite
+80b1f168bc00a37a4aa3e86ee140db07c36284ce refs/remotes/origin/feat/improve-cover-image-gen
+e2e1011bdecaf84d59c70fa42ff3d2c29c537b65 refs/remotes/origin/master
+ea94a8bd77fbe4fb24a76ee188bcc58595f1d4eb refs/tags/v1.0
+d0c7635a8bb288305d7feecb9821e8b9eac78a64 refs/tags/v2.0
+6c7b8cf2f9026c1111e5134b8bfc6d8cd2cdb1c2 refs/tags/v3.0
+0af2e50d893240d1a196063ce89301cf24f82ac7 refs/tags/v4.0
+b6af9eddee7f816b01a68836344b36d30de4a492 refs/tags/v5.0
+54a3c6073518005182f3c3250ddb7e8c0cacd7ad refs/tags/v6.0
+25e5b4d2982aacfee9a1194d2738db284c2ac380 refs/tags/v7.0
+25a4cf9e3d290e7d47c582737a071a8e367f6e33 refs/tags/v8.0
+^a2eb47bb4b805116dcd34c1605d39835121f8dbe
