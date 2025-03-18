@@ -1,6 +1,7 @@
 ---
 title: "Building a Data Pipeline: From Raw Data to Actionable Insights"
 date: 2025-03-18
+slug: "data-pipeline"
 ---
 
 ## Project Overview

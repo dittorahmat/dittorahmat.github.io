@@ -2,6 +2,7 @@
 title: "Machine Learning Basics: A Practical Guide"
 date: 2025-03-18
 categories: ["Machine Learning"]
+url: "/blog/machine-learning-basics/"
 ---
 
 ## What is Machine Learning? (In Simple Terms)

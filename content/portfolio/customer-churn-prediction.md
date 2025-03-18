@@ -1,6 +1,7 @@
 ---
 title: "Customer Churn Prediction: A Case Study"
 date: 2025-03-18
+slug: "customer-churn-prediction"
 ---
 
 ## Project Overview

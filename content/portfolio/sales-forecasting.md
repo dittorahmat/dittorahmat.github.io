@@ -1,6 +1,7 @@
 ---
 title: "Sales Forecasting: A Time Series Adventure"
 date: 2025-03-18
+slug: "sales-forecasting"
 ---
 
 ## Project Overview

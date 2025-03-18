@@ -1,6 +1,7 @@
 ---
 title: "Data Visualization Dashboard: Bringing Data to Life"
 date: 2025-03-18
+slug: "data-visualization-dashboard"
 ---
 
 ## Project Overview

@@ -1,6 +1,7 @@
 ---
 title: "Sentiment Analysis of Social Media Data: Understanding Customer Opinions"
 date: 2025-03-18
+slug: "sentiment-analysis"
 ---
 
 ## Project Overview

@@ -1,5 +1,5 @@
 theme = "PaperMod"
-baseURL = "https://dittorahmat.github.io/"
+#baseURL = "https://dittorahmat.github.io/"
 
 [params]
   title = "Data with Ditto"

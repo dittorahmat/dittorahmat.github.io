@@ -2,6 +2,7 @@
 title: "Data Visualization Best Practices: My Top Tips"
 date: 2025-03-18
 categories: ["Data Visualization"]
+slug: "data-visualization-best-practices"
 ---
 
 ## What is Data Visualization? (And Why You Should Care)
