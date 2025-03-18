@@ -1,64 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>About Me on </title>
-    <link>https://dittorahmat.github.io/</link>
-    <description>Recent content in About Me on </description>
+    <title>Data with Ditto on </title>
+    <link>/</link>
+    <description>Recent content in Data with Ditto on </description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dittorahmat.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My Fourth Blog Post</title>
-      <link>https://dittorahmat.github.io/blog/fourth-post/</link>
-      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dittorahmat.github.io/blog/fourth-post/</guid>
-      <description>&lt;p&gt;This is placeholder content for my fourth blog post.&lt;/p&gt;
-&lt;p&gt;This is just to demonstrate that blog posts are now working and being displayed on the homepage.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fifth Post</title>
-      <link>https://dittorahmat.github.io/blog/fifth-post/</link>
-      <pubDate>Sun, 09 Mar 2025 06:20:01 +0700</pubDate>
-      <guid>https://dittorahmat.github.io/blog/fifth-post/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Third Post</title>
-      <link>https://dittorahmat.github.io/blog/third-post/</link>
-      <pubDate>Sun, 09 Mar 2025 06:01:02 +0700</pubDate>
-      <guid>https://dittorahmat.github.io/blog/third-post/</guid>
-      <description>&lt;p&gt;This is placeholder content for my third blog post.&lt;/p&gt;
-&lt;p&gt;This is just to demonstrate that blog posts are now working and being displayed on the homepage.&lt;/p&gt;</description>
-    </item>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
-      <link>https://dittorahmat.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dittorahmat.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;p&gt;This is a placeholder for your &amp;ldquo;About Me&amp;rdquo; section.&lt;/p&gt;
 &lt;p&gt;You can write a brief introduction about yourself, your background as a data engineer, your skills, and your interests.&lt;/p&gt;
 &lt;p&gt;This section is a great way to connect with your audience and showcase your personality.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Portfolio</title>
-      <link>https://dittorahmat.github.io/portfolio/</link>
+      <title>Blog</title>
+      <link>/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dittorahmat.github.io/portfolio/</guid>
+      <guid>/blog/</guid>
+      <description>&lt;h2 id=&#34;recent-posts&#34;&gt;Recent Posts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/blog/data-analysis-intro/&#34;&gt;Data Analysis Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/blog/machine-learning-basics/&#34;&gt;Machine Learning Basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/blog/data-visualization-best-practices/&#34;&gt;Data Visualization Best Practices&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio</title>
+      <link>/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/portfolio/</guid>
       <description>&lt;h2 id=&#34;my-projects&#34;&gt;My Projects&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s a diagram of my data engineering skills:&lt;/p&gt;
-&lt;pre class=&#34;mermaid&#34;&gt;graph TD
-    A[Data Engineering] --&amp;gt; B(Data Warehousing)
-    A --&amp;gt; C(Data Pipelines)
-    A --&amp;gt; D(Data Analysis)
-    B --&amp;gt; E{SQL}
-    B --&amp;gt; F{ETL}
-    C --&amp;gt; G{Airflow}
-    C --&amp;gt; H{Spark}
-    D --&amp;gt; I{Python}
-    D --&amp;gt; J{Tableau}
-&lt;/pre&gt;
-&lt;p&gt;More projects coming soon!&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/portfolio/customer-churn-prediction/&#34;&gt;Customer Churn Prediction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/portfolio/sales-forecasting/&#34;&gt;Sales Forecasting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/portfolio/sentiment-analysis/&#34;&gt;Sentiment Analysis of Social Media Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/portfolio/data-visualization-dashboard/&#34;&gt;Data Visualization Dashboard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/portfolio/data-pipeline/&#34;&gt;Building a Data Pipeline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
