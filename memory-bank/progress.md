@@ -1,19 +1,23 @@
 # Progress
 
 ## What Works:
-- Memory bank initialization complete.
+
+*   Memory bank initialization complete.
+*   Hugo project setup (title, description, about section).
+*   Portfolio section creation (mockup projects).
 
 ## What's Left to Build:
-- Hugo project setup
-- Theme selection and customization
-- Portfolio section creation
-- Blog section creation
-- About section creation
-- Content creation
-- Deployment to GitHub Pages
+
+*   Blog section creation
+*   Content creation (blog posts)
+*   Deployment to GitHub Pages
 
 ## Current Status:
-- Memory bank initialized. Planning Hugo setup.
+
+*   Hugo project setup complete.
+*   Portfolio section with mockup projects created.
+*   Working on blog section creation.
 
 ## Known Issues:
-- None so far.
+
+*   None so far.

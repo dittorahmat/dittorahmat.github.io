@@ -2,6 +2,8 @@ theme = "PaperMod"
 baseURL = "https://dittorahmat.github.io/"
 
 [params]
+  title = "Data with Ditto"
+  description = "Exploring the world of data, one insight at a time. Join Ditto on a journey through data engineering, machine learning, and everything in between."
   mainSections = []
   paginate = 5
   mermaid = true

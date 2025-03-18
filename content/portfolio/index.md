@@ -4,19 +4,8 @@ title: "Portfolio"
 
 ## My Projects
 
-Here's a diagram of my data engineering skills:
-
-```mermaid
-graph TD
-    A[Data Engineering] --> B(Data Warehousing)
-    A --> C(Data Pipelines)
-    A --> D(Data Analysis)
-    B --> E{SQL}
-    B --> F{ETL}
-    C --> G{Airflow}
-    C --> H{Spark}
-    D --> I{Python}
-    D --> J{Tableau}
-```
-
-More projects coming soon!
+*   [Customer Churn Prediction](/portfolio/customer-churn-prediction/)
+*   [Sales Forecasting](/portfolio/sales-forecasting/)
+*   [Sentiment Analysis of Social Media Data](/portfolio/sentiment-analysis/)
+*   [Data Visualization Dashboard](/portfolio/data-visualization-dashboard/)
+*   [Building a Data Pipeline](/portfolio/data-pipeline/)
