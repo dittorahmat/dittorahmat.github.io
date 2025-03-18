@@ -1,26 +1,26 @@
 ---
-title: "Customer Churn Prediction"
+title: "Customer Churn Prediction: A Case Study"
 date: 2025-03-18
 ---
 
 ## Project Overview
 
-This project focuses on building a machine learning model to predict customer churn for a subscription-based service. The goal is to identify customers who are likely to cancel their subscriptions, allowing the company to take proactive measures to retain them.
+In this project, I built a machine learning model to predict customer churn for a subscription-based service. The goal was to identify customers who were likely to cancel their subscriptions, allowing the company to take proactive measures to retain them.
 
 ## Technologies Used
 
-*   Python
-*   Scikit-learn
-*   Pandas
-*   Matplotlib
-*   Seaborn
+*   Python: My primary language for data analysis and model building.
+*   Scikit-learn: A powerful library for machine learning in Python.
+*   Pandas: For data manipulation and analysis.
+*   Matplotlib: For creating visualizations.
+*   Seaborn: For creating more advanced visualizations.
 
 ## Project Details
 
-*   Performed data analysis and feature engineering to identify key factors that contribute to customer churn.
-*   Built and evaluated several machine learning models, including logistic regression, support vector machines, and random forests.
-*   Developed a model deployment strategy to integrate the churn prediction model into the company's customer relationship management (CRM) system.
+*   I started by performing data analysis and feature engineering to identify key factors that contribute to customer churn.
+*   Then, I built and evaluated several machine learning models, including logistic regression, support vector machines, and random forests.
+*   Finally, I developed a model deployment strategy to integrate the churn prediction model into the company's customer relationship management (CRM) system.
 
 ## Results
 
-The churn prediction model achieved an accuracy of 85% in identifying customers who are likely to churn. This allows the company to proactively engage with these customers and offer incentives to retain them, resulting in a significant reduction in customer churn rate.
+The churn prediction model achieved an accuracy of 85% in identifying customers who are likely to churn. This allowed the company to proactively engage with these customers and offer incentives to retain them, resulting in a significant reduction in customer churn rate. It was a rewarding experience to see the impact of my work on the company's bottom line.
