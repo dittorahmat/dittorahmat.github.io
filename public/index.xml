@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data With Ditto</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:42337/</link>
     <description>Recent content on Data With Ditto</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:42337/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Optimizing SQLite Databases: A Junior Developer&#39;s Guide</title>
-      <link>http://localhost:1313/sqlite-optimization-guide/</link>
+      <link>http://localhost:42337/sqlite-optimization-guide/</link>
       <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sqlite-optimization-guide/</guid>
+      <guid>http://localhost:42337/sqlite-optimization-guide/</guid>
       <description>&lt;h1 id=&#34;optimizing-sqlite-databases-a-junior-developers-guide&#34;&gt;Optimizing SQLite Databases: A Junior Developer&amp;rsquo;s Guide&lt;/h1&gt;&#xA;&lt;p&gt;Hey there! Today, I&amp;rsquo;m going to walk you through some cool ways to keep your SQLite database running smoothly. If you&amp;rsquo;ve ever wondered how to clean up and speed up your database, you&amp;rsquo;re in the right place.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-performance-problem&#34;&gt;The Performance Problem&lt;/h2&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s face it - databases can get messy. Over time, they accumulate deleted data, fragmentation, and performance bottlenecks. That&amp;rsquo;s where database optimization comes in.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Taming Large TSV Files: My Journey to Efficient MySQL Imports</title>
+      <link>http://localhost:42337/import-large-tsv-file-to-mysql/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:42337/import-large-tsv-file-to-mysql/</guid>
+      <description>&lt;h1 id=&#34;taming-large-tsv-files-my-journey-to-efficient-mysql-imports&#34;&gt;Taming Large TSV Files: My Journey to Efficient MySQL Imports&lt;/h1&gt;&#xA;&lt;p&gt;Hey there! Today, I&amp;rsquo;m going to walk you through solving a tricky database import problem I recently helped someone solve. If you&amp;rsquo;ve ever struggled with importing massive TSV files into MySQL, this guide is for you.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-initial-challenge&#34;&gt;The Initial Challenge&lt;/h2&gt;&#xA;&lt;p&gt;My colleague came to me with a pretty common big data problem:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;They needed to import a massive TSV file (2.25 GB, around 15 million rows)&lt;/li&gt;&#xA;&lt;li&gt;MySQL Workbench&amp;rsquo;s import wizard was failing miserably&lt;/li&gt;&#xA;&lt;li&gt;They wanted a reliable way to:&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Import large files&lt;/li&gt;&#xA;&lt;li&gt;Update existing tables&lt;/li&gt;&#xA;&lt;li&gt;Manage the data efficiently&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-solution-a-custom-python-import-script&#34;&gt;The Solution: A Custom Python Import Script&lt;/h2&gt;&#xA;&lt;p&gt;After some brainstorming, I developed a Python script that tackles these challenges head-on. Here&amp;rsquo;s why it&amp;rsquo;s awesome:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>About Ditto</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://localhost:42337/about/</link>
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://localhost:42337/about/</guid>
       <description>&lt;p&gt;Hey there! I&amp;rsquo;m Ditto, a Senior Data Engineer and Business Intelligence pro with over 17 years of experience in the data world. I&amp;rsquo;ve spent my career building data warehouses, developing ETL pipelines, and creating business intelligence solutions that help companies make better decisions.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve worked with a variety of companies, from startups to large enterprises, and I&amp;rsquo;ve always been passionate about using data to solve problems and drive business value.&lt;/p&gt;</description>
     </item>
   </channel>
