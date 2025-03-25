@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data With Ditto</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Data With Ditto</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing SQLite Databases: A Junior Developer&#39;s Guide</title>
+      <link>http://localhost:1313/sqlite-optimization-guide/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sqlite-optimization-guide/</guid>
+      <description>&lt;h1 id=&#34;optimizing-sqlite-databases-a-junior-developers-guide&#34;&gt;Optimizing SQLite Databases: A Junior Developer&amp;rsquo;s Guide&lt;/h1&gt;&#xA;&lt;p&gt;Hey there! Today, I&amp;rsquo;m going to walk you through some cool ways to keep your SQLite database running smoothly. If you&amp;rsquo;ve ever wondered how to clean up and speed up your database, you&amp;rsquo;re in the right place.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-performance-problem&#34;&gt;The Performance Problem&lt;/h2&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s face it - databases can get messy. Over time, they accumulate deleted data, fragmentation, and performance bottlenecks. That&amp;rsquo;s where database optimization comes in.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Ditto</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hey there! I&amp;rsquo;m Ditto, a Senior Data Engineer and Business Intelligence pro with over 17 years of experience in the data world. I&amp;rsquo;ve spent my career building data warehouses, developing ETL pipelines, and creating business intelligence solutions that help companies make better decisions.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve worked with a variety of companies, from startups to large enterprises, and I&amp;rsquo;ve always been passionate about using data to solve problems and drive business value.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
