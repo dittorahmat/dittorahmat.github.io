@@ -6,6 +6,14 @@
     <description>Recent content in Categories on Data With Ditto</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technical Guides</title>
+      <link>https://example.org/categories/technical-guides/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/categories/technical-guides/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
