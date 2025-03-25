@@ -6,8 +6,12 @@ YYYY-03-25 14:10:24 - Log of updates made.
 [2025-03-25 14:19:49] - Current Focus: Setting up and configuring the Hugo blog.
 [2025-03-25 14:24:23] - Current Focus: Adding content to the Hugo blog.
 [2025-03-25 14:33:45] - Current Focus: Improving the site's navigation.
+[2025-03-25 14:48:19] - Current Focus: Deploying the site to GitHub Pages.
 
 
+
+
+[2025-03-25 14:48:19] - Recent Changes: Set up auto-deploy to GitHub Pages.
 
 *
 [2025-03-25 14:33:45] - Recent Changes: Added the About page to the navigation menu.
