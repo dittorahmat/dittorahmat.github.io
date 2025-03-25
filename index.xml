@@ -16,6 +16,13 @@
       <description>&lt;h1 id=&#34;optimizing-sqlite-databases-a-junior-developers-guide&#34;&gt;Optimizing SQLite Databases: A Junior Developer&amp;rsquo;s Guide&lt;/h1&gt;&#xA;&lt;p&gt;Hey there! Today, I&amp;rsquo;m going to walk you through some cool ways to keep your SQLite database running smoothly. If you&amp;rsquo;ve ever wondered how to clean up and speed up your database, you&amp;rsquo;re in the right place.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-performance-problem&#34;&gt;The Performance Problem&lt;/h2&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s face it - databases can get messy. Over time, they accumulate deleted data, fragmentation, and performance bottlenecks. That&amp;rsquo;s where database optimization comes in.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Taming Large TSV Files: My Journey to Efficient MySQL Imports</title>
+      <link>https://example.org/import-large-tsv-file-to-mysql/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/import-large-tsv-file-to-mysql/</guid>
+      <description>&lt;h1 id=&#34;taming-large-tsv-files-my-journey-to-efficient-mysql-imports&#34;&gt;Taming Large TSV Files: My Journey to Efficient MySQL Imports&lt;/h1&gt;&#xA;&lt;p&gt;Hey there! Today, I&amp;rsquo;m going to walk you through solving a tricky database import problem I recently helped someone solve. If you&amp;rsquo;ve ever struggled with importing massive TSV files into MySQL, this guide is for you.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-initial-challenge&#34;&gt;The Initial Challenge&lt;/h2&gt;&#xA;&lt;p&gt;My colleague came to me with a pretty common big data problem:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;They needed to import a massive TSV file (2.25 GB, around 15 million rows)&lt;/li&gt;&#xA;&lt;li&gt;MySQL Workbench&amp;rsquo;s import wizard was failing miserably&lt;/li&gt;&#xA;&lt;li&gt;They wanted a reliable way to:&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Import large files&lt;/li&gt;&#xA;&lt;li&gt;Update existing tables&lt;/li&gt;&#xA;&lt;li&gt;Manage the data efficiently&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-solution-a-custom-python-import-script&#34;&gt;The Solution: A Custom Python Import Script&lt;/h2&gt;&#xA;&lt;p&gt;After some brainstorming, I developed a Python script that tackles these challenges head-on. Here&amp;rsquo;s why it&amp;rsquo;s awesome:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>About Ditto</title>
       <link>https://example.org/about/</link>
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
