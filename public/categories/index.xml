@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Data With Ditto</title>
-    <link>http://localhost:42337/categories/</link>
+    <link>https://dittorahmat.github.io/categories/</link>
     <description>Recent content in Categories on Data With Ditto</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:42337/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dittorahmat.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technical Guides</title>
+      <link>https://dittorahmat.github.io/categories/technical-guides/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/categories/technical-guides/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

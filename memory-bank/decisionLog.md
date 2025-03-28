@@ -1,3 +1,4 @@
+[2025-03-28 17:50:00] - Updated baseURL in hugo.toml from example.org to dittorahmat.github.io to point the XML generator to the correct website.
 # Decision Log
 
 This file records architectural and implementation decisions using a list format.

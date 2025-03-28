@@ -2,20 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:42337/</loc>
+    <loc>https://dittorahmat.github.io/categories/</loc>
     <lastmod>2025-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:42337/sqlite-optimization-guide/</loc>
+    <loc>https://dittorahmat.github.io/</loc>
     <lastmod>2025-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:42337/import-large-tsv-file-to-mysql/</loc>
+    <loc>https://dittorahmat.github.io/tags/database-performance/</loc>
     <lastmod>2025-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:42337/about/</loc>
+    <loc>https://dittorahmat.github.io/tags/devops/</loc>
+    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/sqlite-optimization-guide/</loc>
+    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/postgresql/</loc>
+    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/postgresql-connection-management-troubleshooting-guide/</loc>
+    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/</loc>
+    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/import-large-tsv-file-to-mysql/</loc>
+    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/categories/technical-guides/</loc>
+    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/about/</loc>
     <lastmod>2025-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:42337/categories/</loc>
-  </url><url>
-    <loc>http://localhost:42337/tags/</loc>
   </url>
 </urlset>
