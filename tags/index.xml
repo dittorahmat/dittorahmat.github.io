@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Data With Ditto</title>
-    <link>https://example.org/tags/</link>
+    <link>https://dittorahmat.github.io/tags/</link>
     <description>Recent content in Tags on Data With Ditto</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dittorahmat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Database Performance</title>
-      <link>https://example.org/tags/database-performance/</link>
+      <link>https://dittorahmat.github.io/tags/database-performance/</link>
       <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/database-performance/</guid>
+      <guid>https://dittorahmat.github.io/tags/database-performance/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>https://example.org/tags/devops/</link>
+      <link>https://dittorahmat.github.io/tags/devops/</link>
       <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/devops/</guid>
+      <guid>https://dittorahmat.github.io/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>PostgreSQL</title>
-      <link>https://example.org/tags/postgresql/</link>
+      <link>https://dittorahmat.github.io/tags/postgresql/</link>
       <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/postgresql/</guid>
+      <guid>https://dittorahmat.github.io/tags/postgresql/</guid>
       <description></description>
     </item>
   </channel>
