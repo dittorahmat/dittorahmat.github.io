@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Building an SQL System for API Data and Automated Reporting | Data With Ditto</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="A practical guide to creating an SQL-based automated reporting system that pulls data from APIs and sends custom reports based on configurable alerts.">
+    <meta name="google-site-verification" content="e6W9zZZ6nt4RCdXArOm6dQ3Dl_itzNvJhrVCYAEPJJ8" />
+    <meta name="generator" content="Hugo 0.146.5">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Ditto">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://dittorahmat.github.io/sql-api-integration-pipelone/">
+    
+
+    <meta property="og:url" content="https://dittorahmat.github.io/sql-api-integration-pipelone/">
+  <meta property="og:site_name" content="Data With Ditto">
+  <meta property="og:title" content="Building an SQL System for API Data and Automated Reporting">
+  <meta property="og:description" content="A practical guide to creating an SQL-based automated reporting system that pulls data from APIs and sends custom reports based on configurable alerts.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2025-04-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-17T00:00:00+00:00">
+    <meta property="article:tag" content="SQL">
+    <meta property="article:tag" content="API">
+    <meta property="article:tag" content="Automation">
+    <meta property="article:tag" content="Reporting">
+    <meta property="article:tag" content="Data Pipeline">
+
+  <meta itemprop="name" content="Building an SQL System for API Data and Automated Reporting">
+  <meta itemprop="description" content="A practical guide to creating an SQL-based automated reporting system that pulls data from APIs and sends custom reports based on configurable alerts.">
+  <meta itemprop="datePublished" content="2025-04-17T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-04-17T00:00:00+00:00">
+  <meta itemprop="wordCount" content="545">
+  <meta itemprop="keywords" content="SQL,API,Automation,Reporting,Data Pipeline">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Building an SQL System for API Data and Automated Reporting">
+  <meta name="twitter:description" content="A practical guide to creating an SQL-based automated reporting system that pulls data from APIs and sends custom reports based on configurable alerts.">
+
+      
+    
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Building an SQL System for API Data and Automated Reporting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical guide to creating an SQL-based automated reporting system that pulls data from APIs and sends custom reports based on configurable alerts.">
+  <link rel="stylesheet" href="https://dittorahmat.github.io/css/style.css">
+  <link rel="stylesheet" href="https://dittorahmat.github.io/css/custom.css">
+  <link rel="canonical" href="https://dittorahmat.github.io/sql-api-integration-pipelone/">
+  <link rel="alternate" type="application/rss+xml" href="https://dittorahmat.github.io/index.xml" title="Data With Ditto">
+
+  <meta name="google-site-verification" content="e6W9zZZ6nt4RCdXArOm6dQ3Dl_itzNvJhrVCYAEPJJ8" />
+</head>
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Data With Ditto
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Data With Ditto
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Building an SQL System for API Data and Automated Reporting</h1>
+      
+      <p class="tracked"><strong>Ditto</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-04-17T00:00:00Z">April 17, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="the-challenge">The Challenge</h2>
+<p>Recently, I was looking into building a system that could:</p>
+<ol>
+<li>Pull data from external APIs using SQL</li>
+<li>Store this data efficiently</li>
+<li>Set up automatic alerts based on specific conditions</li>
+<li>Generate and send custom reports based on these alerts</li>
+</ol>
+<p>Here&rsquo;s what I learned.</p>
+<h2 id="the-solution-sql--api-integration-pipeline">The Solution: SQL + API Integration Pipeline</h2>
+<p>The solution involves several components working together:</p>
+<h3 id="1-database-setup">1. Database Setup</h3>
+<p>You need a solid database to store your API data. Popular options include:</p>
+<ul>
+<li>PostgreSQL (great for analytics and complex data)</li>
+<li>MySQL (widely supported)</li>
+<li>SQL Server (ideal for Microsoft environments)</li>
+</ul>
+<h3 id="2-api-connection-code">2. API Connection Code</h3>
+<p>Here&rsquo;s how you can connect to APIs using PostgreSQL&rsquo;s foreign data wrapper:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Setting up the connection to the API
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> EXTENSION <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> postgres_fdw;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> SERVER api_server
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">DATA</span> WRAPPER postgres_fdw
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">OPTIONS</span> (<span style="color:#66d9ef">host</span> <span style="color:#e6db74">&#39;api.example.com&#39;</span>, port <span style="color:#e6db74">&#39;443&#39;</span>, dbname <span style="color:#e6db74">&#39;apidata&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Alternative: scheduled job approach
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">PROCEDURE</span> fetch_api_data()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LANGUAGE</span> plpgsql <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">$$</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- Your API call logic goes here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">-- Then insert the results into your local table
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> api_data
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> api_response;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>; <span style="color:#960050;background-color:#1e0010">$$</span>;
+</span></span></code></pre></div><h3 id="3-alert-system-configuration">3. Alert System Configuration</h3>
+<p>Alerts are based on thresholds that you define:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> alert_thresholds (
+</span></span><span style="display:flex;"><span>    metric_name VARCHAR(<span style="color:#ae81ff">100</span>),
+</span></span><span style="display:flex;"><span>    warning_threshold FLOAT,
+</span></span><span style="display:flex;"><span>    critical_threshold FLOAT,
+</span></span><span style="display:flex;"><span>    recipients VARCHAR(<span style="color:#ae81ff">1000</span>),
+</span></span><span style="display:flex;"><span>    last_alert_sent <span style="color:#66d9ef">TIMESTAMP</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> check_alerts()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">RETURNS</span> VOID <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">$$</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DECLARE</span>
+</span></span><span style="display:flex;"><span>    alert_record RECORD;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOR</span> alert_record <span style="color:#66d9ef">IN</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>            a.metric_name,
+</span></span><span style="display:flex;"><span>            a.warning_threshold,
+</span></span><span style="display:flex;"><span>            a.critical_threshold,
+</span></span><span style="display:flex;"><span>            a.recipients,
+</span></span><span style="display:flex;"><span>            m.current_value
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> alert_thresholds a
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">JOIN</span> metrics m <span style="color:#66d9ef">ON</span> a.metric_name <span style="color:#f92672">=</span> m.name
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>            m.current_value <span style="color:#f92672">&gt;</span> a.critical_threshold <span style="color:#66d9ef">AND</span>
+</span></span><span style="display:flex;"><span>            (a.last_alert_sent <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">OR</span> a.last_alert_sent <span style="color:#f92672">&lt;</span> NOW() <span style="color:#f92672">-</span> INTERVAL <span style="color:#e6db74">&#39;24 hours&#39;</span>)
+</span></span><span style="display:flex;"><span>    LOOP
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- Logic to send the alert
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">-- Update timestamp to prevent spam
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">UPDATE</span> alert_thresholds
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SET</span> last_alert_sent <span style="color:#f92672">=</span> NOW()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">WHERE</span> metric_name <span style="color:#f92672">=</span> alert_record.metric_name;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">END</span> LOOP;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$$</span> <span style="color:#66d9ef">LANGUAGE</span> plpgsql;
+</span></span></code></pre></div><h3 id="4-automated-report-generation">4. Automated Report Generation</h3>
+<p>Reports can be generated automatically with stored procedures:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">PROCEDURE</span> generate_daily_report()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LANGUAGE</span> plpgsql <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">$$</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DECLARE</span>
+</span></span><span style="display:flex;"><span>    report_content TEXT;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- Build the report content
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Daily Report: &#39;</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">CURRENT_DATE</span> <span style="color:#f92672">||</span> E<span style="color:#e6db74">&#39;\n\n&#39;</span> <span style="color:#f92672">||</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Total transactions: &#39;</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">||</span> E<span style="color:#e6db74">&#39;\n&#39;</span> <span style="color:#f92672">||</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Revenue: $&#39;</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#f92672">||</span> E<span style="color:#e6db74">&#39;\n&#39;</span> <span style="color:#f92672">||</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Anomalies detected: &#39;</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) FILTER (<span style="color:#66d9ef">WHERE</span> is_anomaly <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">INTO</span> report_content
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> transactions
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> transaction_date <span style="color:#f92672">=</span> <span style="color:#66d9ef">CURRENT_DATE</span> <span style="color:#f92672">-</span> INTERVAL <span style="color:#e6db74">&#39;1 day&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- Send the report via email
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    PERFORM send_email(<span style="color:#e6db74">&#39;recipient@example.com&#39;</span>, <span style="color:#e6db74">&#39;Daily Report&#39;</span>, report_content);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$$</span>;
+</span></span></code></pre></div><h3 id="5-scheduling-everything">5. Scheduling Everything</h3>
+<p>Use a scheduler to run everything automatically:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Using PostgreSQL&#39;s pg_cron extension
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> EXTENSION pg_cron;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Get new API data hourly
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> cron.schedule(<span style="color:#e6db74">&#39;0 * * * *&#39;</span>, <span style="color:#e6db74">&#39;CALL fetch_api_data()&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Check for alert conditions every 15 minutes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> cron.schedule(<span style="color:#e6db74">&#39;*/15 * * * *&#39;</span>, <span style="color:#e6db74">&#39;SELECT check_alerts()&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Send daily report at 7am
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> cron.schedule(<span style="color:#e6db74">&#39;0 7 * * *&#39;</span>, <span style="color:#e6db74">&#39;CALL generate_daily_report()&#39;</span>);
+</span></span></code></pre></div><h2 id="important-implementation-notes">Important Implementation Notes</h2>
+<p>If you&rsquo;re implementing this yourself, keep in mind:</p>
+<ul>
+<li>Different database systems will require slightly different syntax</li>
+<li>For complex reporting needs, consider adding tools like Apache Airflow or Power BI</li>
+<li>Store your API credentials securely</li>
+<li>Test thoroughly with small datasets before scaling up</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>If you&rsquo;re building a system like this:</p>
+<ol>
+<li>Start by identifying your data sources and required APIs</li>
+<li>Choose your database system based on your existing tech stack</li>
+<li>Set up a small proof of concept with one API and simple alerts</li>
+<li>Gradually expand with more data sources and complex reporting rules</li>
+</ol>
+<p>Remember that the trickiest part is usually handling API rate limits and authentication properly, so focus on making those parts robust first.</p>
+<p>Happy coding!</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/sql/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">SQL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/api/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">API</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/automation/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Automation</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/reporting/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Reporting</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/data-pipeline/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Data Pipeline</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://dittorahmat.github.io/" >
+    &copy;  Data With Ditto 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

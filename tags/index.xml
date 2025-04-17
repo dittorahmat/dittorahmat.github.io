@@ -9,6 +9,27 @@
     <lastBuildDate>Thu, 17 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dittorahmat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>API</title>
+      <link>https://dittorahmat.github.io/tags/api/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>https://dittorahmat.github.io/tags/automation/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Pipeline</title>
+      <link>https://dittorahmat.github.io/tags/data-pipeline/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/tags/data-pipeline/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Database</title>
       <link>https://dittorahmat.github.io/tags/database/</link>
       <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
@@ -34,6 +55,20 @@
       <link>https://dittorahmat.github.io/tags/recovery/</link>
       <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://dittorahmat.github.io/tags/recovery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reporting</title>
+      <link>https://dittorahmat.github.io/tags/reporting/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/tags/reporting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>https://dittorahmat.github.io/tags/sql/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/tags/sql/</guid>
       <description></description>
     </item>
     <item>

@@ -9,6 +9,20 @@
     <lastBuildDate>Thu, 17 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dittorahmat.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Automation</title>
+      <link>https://dittorahmat.github.io/categories/automation/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/categories/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Engineering</title>
+      <link>https://dittorahmat.github.io/categories/data-engineering/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/categories/data-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>DevOps</title>
       <link>https://dittorahmat.github.io/categories/devops/</link>
       <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
@@ -27,6 +41,13 @@
       <link>https://dittorahmat.github.io/categories/recovery/</link>
       <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://dittorahmat.github.io/categories/recovery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>https://dittorahmat.github.io/categories/sql/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/categories/sql/</guid>
       <description></description>
     </item>
     <item>
