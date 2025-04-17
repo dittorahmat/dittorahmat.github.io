@@ -10,9 +10,9 @@
     <atom:link href="https://dittorahmat.github.io/categories/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building an SQL System for API Data and Automated Reporting</title>
-      <link>https://dittorahmat.github.io/sql-api-integration-pipelone/</link>
+      <link>https://dittorahmat.github.io/sql-api-integration-pipeline/</link>
       <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://dittorahmat.github.io/sql-api-integration-pipelone/</guid>
+      <guid>https://dittorahmat.github.io/sql-api-integration-pipeline/</guid>
       <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;Recently, I was looking into building a system that could:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Pull data from external APIs using SQL&lt;/li&gt;&#xA;&lt;li&gt;Store this data efficiently&lt;/li&gt;&#xA;&lt;li&gt;Set up automatic alerts based on specific conditions&lt;/li&gt;&#xA;&lt;li&gt;Generate and send custom reports based on these alerts&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s what I learned.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-solution-sql--api-integration-pipeline&#34;&gt;The Solution: SQL + API Integration Pipeline&lt;/h2&gt;&#xA;&lt;p&gt;The solution involves several components working together:&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-database-setup&#34;&gt;1. Database Setup&lt;/h3&gt;&#xA;&lt;p&gt;You need a solid database to store your API data. Popular options include:&lt;/p&gt;</description>
     </item>
   </channel>
