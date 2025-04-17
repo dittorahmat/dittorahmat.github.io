@@ -3,10 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dittorahmat.github.io/categories/</loc>
-    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dittorahmat.github.io/</loc>
-    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/database/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/categories/devops/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/gcp/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/categories/gcp/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/mysql/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/recovering-wordpress-hosted-in-gcp-vm/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/categories/recovery/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/recovery/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/vm/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/tags/wordpress/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dittorahmat.github.io/categories/wordpress/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dittorahmat.github.io/tags/database-performance/</loc>
     <lastmod>2025-03-25T00:00:00+00:00</lastmod>
@@ -21,9 +57,6 @@
     <lastmod>2025-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dittorahmat.github.io/postgresql-connection-management-troubleshooting-guide/</loc>
-    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dittorahmat.github.io/tags/</loc>
     <lastmod>2025-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dittorahmat.github.io/import-large-tsv-file-to-mysql/</loc>

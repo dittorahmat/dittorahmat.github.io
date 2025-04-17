@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Data With Ditto</title>
+    <link>https://dittorahmat.github.io/tags/database/</link>
+    <description>Recent content in Database on Data With Ditto</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dittorahmat.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recovering a WordPress Site from a Dead GCP VM</title>
+      <link>https://dittorahmat.github.io/recovering-wordpress-hosted-in-gcp-vm/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dittorahmat.github.io/recovering-wordpress-hosted-in-gcp-vm/</guid>
+      <description>&lt;h1 id=&#34;recovering-a-wordpress-site-from-a-dead-gcp-vm&#34;&gt;Recovering a WordPress Site from a Dead GCP VM&lt;/h1&gt;&#xA;&lt;p&gt;We&amp;rsquo;ve all been there - a production VM suddenly becomes inaccessible, and with it, an entire WordPress site disappears. In this post, I&amp;rsquo;ll walk through a recent recovery process I had to perform when a client&amp;rsquo;s WordPress site went offline due to VM issues on Google Cloud Platform.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;My client reached out with this urgent issue:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I need help to recover and restore a WordPress website hosted on a Google Cloud Platform VM.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Recovering a WordPress Site from a Dead GCP VM | Data With Ditto</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="A step-by-step guide on how to recover a WordPress site from an inaccessible Google Cloud Platform VM using disk cloning and database recovery techniques.">
+    <meta name="google-site-verification" content="e6W9zZZ6nt4RCdXArOm6dQ3Dl_itzNvJhrVCYAEPJJ8" />
+    <meta name="generator" content="Hugo 0.145.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Your Name">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://dittorahmat.github.io/recovering-wordpress-hosted-in-gcp-vm/">
+    
+
+    <meta property="og:url" content="https://dittorahmat.github.io/recovering-wordpress-hosted-in-gcp-vm/">
+  <meta property="og:site_name" content="Data With Ditto">
+  <meta property="og:title" content="Recovering a WordPress Site from a Dead GCP VM">
+  <meta property="og:description" content="A step-by-step guide on how to recover a WordPress site from an inaccessible Google Cloud Platform VM using disk cloning and database recovery techniques.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2025-04-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-17T00:00:00+00:00">
+    <meta property="article:tag" content="Wordpress">
+    <meta property="article:tag" content="Gcp">
+    <meta property="article:tag" content="Vm">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Recovery">
+    <meta property="article:tag" content="Mysql">
+
+  <meta itemprop="name" content="Recovering a WordPress Site from a Dead GCP VM">
+  <meta itemprop="description" content="A step-by-step guide on how to recover a WordPress site from an inaccessible Google Cloud Platform VM using disk cloning and database recovery techniques.">
+  <meta itemprop="datePublished" content="2025-04-17T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-04-17T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1060">
+  <meta itemprop="keywords" content="Wordpress,Gcp,Vm,Database,Recovery,Mysql">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Recovering a WordPress Site from a Dead GCP VM">
+  <meta name="twitter:description" content="A step-by-step guide on how to recover a WordPress site from an inaccessible Google Cloud Platform VM using disk cloning and database recovery techniques.">
+
+      
+    
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Recovering a WordPress Site from a Dead GCP VM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A step-by-step guide on how to recover a WordPress site from an inaccessible Google Cloud Platform VM using disk cloning and database recovery techniques.">
+  <link rel="stylesheet" href="https://dittorahmat.github.io/css/style.css">
+  <link rel="stylesheet" href="https://dittorahmat.github.io/css/custom.css">
+  <link rel="canonical" href="https://dittorahmat.github.io/recovering-wordpress-hosted-in-gcp-vm/">
+  <link rel="alternate" type="application/rss+xml" href="https://dittorahmat.github.io/index.xml" title="Data With Ditto">
+
+  <meta name="google-site-verification" content="e6W9zZZ6nt4RCdXArOm6dQ3Dl_itzNvJhrVCYAEPJJ8" />
+</head>
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Data With Ditto
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <h1 class="f1">
+          Recovering a WordPress Site from a Dead GCP VM
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links mid-gray">
+        <h1 id="recovering-a-wordpress-site-from-a-dead-gcp-vm">Recovering a WordPress Site from a Dead GCP VM</h1>
+<p>We&rsquo;ve all been there - a production VM suddenly becomes inaccessible, and with it, an entire WordPress site disappears. In this post, I&rsquo;ll walk through a recent recovery process I had to perform when a client&rsquo;s WordPress site went offline due to VM issues on Google Cloud Platform.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>My client reached out with this urgent issue:</p>
+<blockquote>
+<p>I need help to recover and restore a WordPress website hosted on a Google Cloud Platform VM.</p>
+<p>Context:
+The original VM hosting the WordPress site is inaccessible via SSH — the issue appears to be related to corrupted SSH metadata, broken keys, or instance-level misconfiguration.</p>
+<p>Console and serial access have also failed, and the VM cannot be accessed or repaired easily in its current state.</p>
+<p>What I&rsquo;ve Already Done:
+I have cloned the boot disk from the original VM and attached it to a new rescue VM.</p>
+<p>I&rsquo;ve confirmed that the full WordPress directory is intact — including:</p>
+<p>wp-config.php</p>
+<p>/wp-content/ (themes, plugins, media)</p>
+<p>I can browse the file system and have full access to the cloned disk.</p>
+<p>The WordPress database (MySQL) is also present on the cloned disk at /var/lib/mysql/wordpress, but it may require recovery.</p>
+<p>The current environment is running MySQL 8.0, but the original disk was on MySQL 5.7, and it was not cleanly shut down — which has created compatibility issues with redo logs.</p>
+<p>What I Need:
+Restore the full WordPress site to a new clean GCP VM, using the cloned disk data.</p>
+<p>Dump and import the existing MySQL wordpress database safely, likely by:</p>
+<p>Spinning up a temporary MySQL 5.7 environment</p>
+<p>Exporting the DB from the cloned disk</p>
+<p>Importing it into the new server (which can be MySQL 8+)</p>
+<p>Ensure the site works, loads as expected, and I can log into wp-admin</p>
+<p>Ensure I have SSH access and a working LAMP/LEMP environment</p>
+<p>Possibly upgrade PHP or install extensions if needed</p>
+<p>Set up Let&rsquo;s Encrypt SSL again if needed (optional but ideal)</p>
+<p>Platform details:
+GCP VM, Debian/Ubuntu (standard WordPress image)</p>
+<p>WordPress + MySQL (no Cloud SQL)</p>
+<p>Apache2, PHP (version may need upgrade)</p></blockquote>
+<h2 id="the-solution">The Solution</h2>
+<p>Here was the solution that we came up with:</p>
+<blockquote>
+<h2 id="recovery-plan">Recovery Plan</h2>
+<p>Let&rsquo;s break this down into the following steps:</p>
+<ol>
+<li>Mount and access the cloned disk data</li>
+<li>Recover the MySQL database</li>
+<li>Set up a new VM with proper LAMP stack</li>
+<li>Restore WordPress files</li>
+<li>Configure WordPress</li>
+<li>Set up SSL with Let&rsquo;s Encrypt</li>
+</ol>
+<h3 id="step-1-mount-and-access-the-cloned-disk">Step 1: Mount and Access the Cloned Disk</h3>
+<p>First, let&rsquo;s make sure the cloned disk is properly mounted on your rescue VM:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># List available disks</span>
+</span></span><span style="display:flex;"><span>sudo lsblk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a mount point if not already done</span>
+</span></span><span style="display:flex;"><span>sudo mkdir -p /mnt/cloned-disk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mount the cloned disk (assuming it&#39;s sdb1 - adjust as needed)</span>
+</span></span><span style="display:flex;"><span>sudo mount /dev/sdb1 /mnt/cloned-disk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify the WordPress files are accessible</span>
+</span></span><span style="display:flex;"><span>ls -la /mnt/cloned-disk/var/www/html
+</span></span></code></pre></div><h3 id="step-2-recover-the-mysql-database">Step 2: Recover the MySQL Database</h3>
+<p>Since you&rsquo;re dealing with MySQL version compatibility issues (5.7 to 8.0), let&rsquo;s use a temporary MySQL 5.7 container to recover the database:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install Docker if not already installed</span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install -y docker.io
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run a MySQL 5.7 container with the cloned MySQL data directory mounted</span>
+</span></span><span style="display:flex;"><span>sudo docker run --name mysql57recovery -e MYSQL_ALLOW_EMPTY_PASSWORD<span style="color:#f92672">=</span>yes <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -v /mnt/cloned-disk/var/lib/mysql:/var/lib/mysql <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -d mysql:5.7
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Wait for the container to start and recover the database</span>
+</span></span><span style="display:flex;"><span>sleep <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Export the WordPress database from the container</span>
+</span></span><span style="display:flex;"><span>sudo docker exec mysql57recovery mysqldump --no-tablespaces wordpress &gt; wordpress_backup.sql
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Stop and remove the recovery container</span>
+</span></span><span style="display:flex;"><span>sudo docker stop mysql57recovery
+</span></span><span style="display:flex;"><span>sudo docker rm mysql57recovery
+</span></span></code></pre></div><h3 id="step-3-set-up-a-new-vm-with-lamp-stack">Step 3: Set Up a New VM with LAMP Stack</h3>
+<p>Now, let&rsquo;s set up a fresh VM with LAMP:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Update system</span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get upgrade -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install Apache, MySQL 8, PHP and required extensions</span>
+</span></span><span style="display:flex;"><span>sudo apt-get install -y apache2 mysql-server php php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start and enable services</span>
+</span></span><span style="display:flex;"><span>sudo systemctl start apache2
+</span></span><span style="display:flex;"><span>sudo systemctl enable apache2
+</span></span><span style="display:flex;"><span>sudo systemctl start mysql
+</span></span><span style="display:flex;"><span>sudo systemctl enable mysql
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Secure MySQL installation</span>
+</span></span><span style="display:flex;"><span>sudo mysql_secure_installation
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create WordPress database and user</span>
+</span></span><span style="display:flex;"><span>sudo mysql -e <span style="color:#e6db74">&#34;CREATE DATABASE wordpress;&#34;</span>
+</span></span><span style="display:flex;"><span>sudo mysql -e <span style="color:#e6db74">&#34;CREATE USER &#39;wpuser&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;your_strong_password&#39;;&#34;</span>
+</span></span><span style="display:flex;"><span>sudo mysql -e <span style="color:#e6db74">&#34;GRANT ALL PRIVILEGES ON wordpress.* TO &#39;wpuser&#39;@&#39;localhost&#39;;&#34;</span>
+</span></span><span style="display:flex;"><span>sudo mysql -e <span style="color:#e6db74">&#34;FLUSH PRIVILEGES;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import the WordPress database</span>
+</span></span><span style="display:flex;"><span>sudo mysql wordpress &lt; wordpress_backup.sql
+</span></span></code></pre></div><h3 id="step-4-restore-wordpress-files">Step 4: Restore WordPress Files</h3>
+<p>Copy the WordPress files from the cloned disk to the new web server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create web directory if it doesn&#39;t exist</span>
+</span></span><span style="display:flex;"><span>sudo mkdir -p /var/www/html
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy WordPress files</span>
+</span></span><span style="display:flex;"><span>sudo cp -r /mnt/cloned-disk/var/www/html/* /var/www/html/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fix permissions</span>
+</span></span><span style="display:flex;"><span>sudo chown -R www-data:www-data /var/www/html/
+</span></span><span style="display:flex;"><span>sudo find /var/www/html/ -type d -exec chmod <span style="color:#ae81ff">755</span> <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span>
+</span></span><span style="display:flex;"><span>sudo find /var/www/html/ -type f -exec chmod <span style="color:#ae81ff">644</span> <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span>
+</span></span></code></pre></div><h3 id="step-5-configure-wordpress">Step 5: Configure WordPress</h3>
+<p>Update the wp-config.php file to match the new database credentials:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Backup the original config</span>
+</span></span><span style="display:flex;"><span>sudo cp /var/www/html/wp-config.php /var/www/html/wp-config.php.bak
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Update database credentials in wp-config.php</span>
+</span></span><span style="display:flex;"><span>sudo sed -i <span style="color:#e6db74">&#34;s/define(&#39;DB_USER&#39;, &#39;.*&#39;)/define(&#39;DB_USER&#39;, &#39;wpuser&#39;)/&#34;</span> /var/www/html/wp-config.php
+</span></span><span style="display:flex;"><span>sudo sed -i <span style="color:#e6db74">&#34;s/define(&#39;DB_PASSWORD&#39;, &#39;.*&#39;)/define(&#39;DB_PASSWORD&#39;, &#39;your_strong_password&#39;)/&#34;</span> /var/www/html/wp-config.php
+</span></span></code></pre></div><h3 id="step-6-set-up-ssl-with-lets-encrypt">Step 6: Set Up SSL with Let&rsquo;s Encrypt</h3>
+<p>Install and configure Let&rsquo;s Encrypt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install Certbot</span>
+</span></span><span style="display:flex;"><span>sudo apt-get install -y certbot python3-certbot-apache
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get SSL certificate (replace example.com with your domain)</span>
+</span></span><span style="display:flex;"><span>sudo certbot --apache -d example.com -d www.example.com
+</span></span></code></pre></div><h2 id="additional-considerations">Additional Considerations</h2>
+<ol>
+<li><strong>Update WordPress Site URL</strong>: If your domain has changed, you&rsquo;ll need to update the site URL in the database:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mysql -e <span style="color:#e6db74">&#34;USE wordpress; UPDATE wp_options SET option_value = &#39;https://yournewdomain.com&#39; WHERE option_name = &#39;siteurl&#39; OR option_name = &#39;home&#39;;&#34;</span>
+</span></span></code></pre></div><ol start="2">
+<li><strong>Check PHP Version</strong>: Ensure your PHP version is compatible with your WordPress installation:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>php -v
+</span></span></code></pre></div><ol start="3">
+<li>
+<p><strong>Test WordPress Admin Access</strong>: Visit yourdomain.com/wp-admin to ensure you can log in.</p>
+</li>
+<li>
+<p><strong>Database Configuration Check</strong>: Make sure the database name in wp-config.php matches what you&rsquo;ve set up:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep DB_NAME /var/www/html/wp-config.php
+</span></span></code></pre></div></blockquote>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>When recovering a WordPress site from a failed VM, remember these critical steps:</p>
+<ol>
+<li><strong>Always create disk snapshots/clones</strong> before attempting any recovery work</li>
+<li><strong>Handle database version compatibility</strong> carefully - especially when dealing with unclean shutdowns</li>
+<li><strong>Use Docker containers</strong> for temporary recovery environments when needed</li>
+<li><strong>Check and update WordPress config files</strong> to match the new environment</li>
+<li><strong>Test functionality thoroughly</strong> before considering the recovery complete</li>
+</ol>
+<p>By following this systematic approach, you can recover a WordPress site even when the original VM is completely inaccessible. While stressful, these situations are recoverable with the right steps and a bit of patience.</p>
+<p>Have you ever had to recover a WordPress site from a dead VM? Share your experiences in the comments!</p>
+
+      </div>
+    </article>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://dittorahmat.github.io/" >
+    &copy;  Data With Ditto 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
