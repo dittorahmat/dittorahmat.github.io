@@ -15,10 +15,13 @@ YYYY-03-25 14:10:43 - Log of updates made.
 [2025-03-25 15:19:29] - Added, committed, and pushed the changes.
 Rationale: To save the changes to the repository.
 Implementation Details: Used git add, git commit, and git push commands.
+[2025-04-17 11:50:20] - Built Hugo site and pushed changes to GitHub.
 Rationale: To ensure the file is properly formatted for Hugo.
 Implementation Details: Added the title, date, and draft properties to the front matter.
+Rationale: To update the live site with the latest content and build artifacts.
 Rationale: To verify the site on Google Search Console.
 Implementation Details: Added the HTML tag to the <head> section of the themes/ananke/layouts/_default/baseof.html file.
+Implementation Details: Used `hugo`, `git add .`, `git commit -m "Build and update site content"`, and `git push origin main` commands.
 Rationale: To automatically deploy the site to GitHub Pages whenever changes are pushed to the main branch.
 Implementation Details: Created a GitHub Actions workflow file in the .github/workflows directory.
 Rationale: To make the About page more prominent.
